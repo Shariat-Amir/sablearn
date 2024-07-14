@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    @font-face {
+        font-family:lalezar ;
+        src: url(../fonts/Lalezar-Font/TTF/Lalezar-Regular.ttf);
+    }
+}
+html{
+  @apply font-lalezar text-lg 
+}
+

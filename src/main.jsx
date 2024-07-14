@@ -8,7 +8,7 @@ import { AppProvider } from './context/app-context.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <AppProvider>
-
+    
     <App />
   </AppProvider>
   

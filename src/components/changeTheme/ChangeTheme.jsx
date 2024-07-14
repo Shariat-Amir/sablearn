@@ -9,7 +9,7 @@ const { theme, changeTheme } = useContext(AppContext);
   
   return (
     <button className='bg-slate-100 h-[50px] w-[50px] rounded-full' onClick={changeTheme} >
-      {theme===true ? <WbSunnyIcon className='scale-110 text-gray-400  text-yellow-500'/>: < DarkModeOutlinedIcon className='scale-110 text-gray-400  '/>}
+      {theme===true ? <WbSunnyIcon className='scale-110 text-yellow-500'/>: < DarkModeOutlinedIcon className='scale-110 text-gray-400  '/>}
 
                     
  

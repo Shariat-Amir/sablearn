@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { NavBar } from "./features"
+import { Footer, NavBar } from "./features"
 import { AppContext } from "./context/app-context"
 
 
@@ -9,7 +9,8 @@ function App() {
   return (
    <div className={`${theme === true ? "dark" : "light"}`}>
   <NavBar />
-  <p>{theme}</p>
+  <div className="bg-green-300 h-[1000px]"></div>
+ <Footer />
    </div>
   )
 }

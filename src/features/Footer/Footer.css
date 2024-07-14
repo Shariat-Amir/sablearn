@@ -1,0 +1,6 @@
+a{
+    @apply hover:text-green-500
+}
+.title{
+    @apply text-xl
+}

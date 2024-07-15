@@ -6,7 +6,11 @@ const LastestCourses = () => {
   return (
     <div className='flex flex-col '>
         <div className='flex justify-between px-20'>
-        <p className='text-3xl dark:text-white'>آحرین دوره های سبزلرن</p>
+            
+        <p className='text-3xl dark:text-white flex gap-5'>
+        <div className='w-6 h-6 bg-yellow-500'></div>
+            آخرین دوره های سبزلرن
+            </p>
         <a className='text-xl text-white' href="">
             مشاهده همه ی دوره ها
             <span><ArrowBackIcon /></span>

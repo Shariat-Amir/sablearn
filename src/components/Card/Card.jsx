@@ -2,9 +2,9 @@ import PersonIcon from '@mui/icons-material/Person';
 import StarIcon from '@mui/icons-material/Star';
 import GroupIcon from '@mui/icons-material/Group';
 import SimpleParallax from "simple-parallax-js";
-const Card = ({title,imgSrc,studentsNum,disc,teacher,price}) => {
+const Card = ({title,imgSrc,studentsNum,disc,teacher,price,className}) => {
   return (
-    <div className=' w-80  dark:bg-slate-700 dark:text-white flex flex-col justify-between rounded-lg shadow-lg'>
+    <div className={` w-80 min-h-[500px] dark:bg-slate-700 dark:text-white flex flex-col justify-between rounded-lg shadow-lg ${className}`} >
         <SimpleParallax scale={1.1} orientation='right'>
         <img src={imgSrc} className='rounded-t-lg' alt="" />
         </SimpleParallax>

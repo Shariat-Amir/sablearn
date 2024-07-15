@@ -2,5 +2,6 @@ import NavBar from "./NavBar/NavBar";
 import Footer from "./Footer/Footer";
 import Hero from "./Hero/Hero";
 import LastestCourses from './lastest-courses/LastestCourses'
+import RoadMap from './RoadMap/RoadMap'
 
-export { NavBar, Footer, Hero,LastestCourses };
+export { NavBar, Footer, Hero,LastestCourses, RoadMap };

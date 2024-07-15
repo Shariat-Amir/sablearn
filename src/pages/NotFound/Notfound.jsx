@@ -1,4 +1,4 @@
-import { redirect, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 
 const Notfound = () => {
@@ -7,7 +7,7 @@ const Notfound = () => {
     console.log(theme);
     const navigate=useNavigate()
   return (
-    <div className={`flex flex-col items-center justify-center h-screen dark:bg-gradient-to-l from-green-950 to-slate-600`}>
+    <div className={`flex flex-col items-center justify-center h-screen dark:bg-gradient-to-l from-slate-800 to-slate-700`}>
 
         <img src="../../images/main/NotFound.png" alt="Notfound" className="w-[1000px]" />
         <p className="text-3xl">متاسفانه صفحه مورد نظر شما پیدا نشد.</p>

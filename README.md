@@ -4,7 +4,7 @@
 #
 ![promote2](public/images/promote2.jpg)
 #
-![promote13](public/images/promote3.jpg)
+![promote3](public/images/promote3.jpg)
 #
 
 

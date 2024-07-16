@@ -1,7 +1,9 @@
+#Static Practice Website
+
 ![IP Address Tracker](public/images/promote.jpg)
 #
 
-Static Practice Website
+
 
 This is a static practice website modeled after the SabzLearn website. As a result, all links related to its courses and lessons are inactive.
 Overview

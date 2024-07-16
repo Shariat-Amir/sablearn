@@ -2,9 +2,9 @@
 
 ![promote11](public/images/promote.jpg)
 #
-![promote2](public/images/promote.jpg)
+![promote2](public/images/promote2.jpg)
 #
-![promote13](public/images/promote.jpg)
+![promote13](public/images/promote3.jpg)
 #
 
 

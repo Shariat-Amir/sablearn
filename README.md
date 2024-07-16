@@ -1,4 +1,4 @@
-#Static Practice Website
+# Static Practice Website
 
 ![IP Address Tracker](public/images/promote.jpg)
 #

@@ -1,11 +1,12 @@
 # Static Practice Website
 
-![IP Address Tracker](public/images/promote.jpg)
+![promote11](public/images/promote.jpg)
 #
-(public/images/promote2.jpg)
+![promote2](public/images/promote.jpg)
 #
-(public/images/promote3.jpg)
+![promote13](public/images/promote.jpg)
 #
+
 
 
 

@@ -1,5 +1,5 @@
-import { RoadMap } from "..";
-import { CarouselComponent } from "../../components";
+import { CarouselContainer, RoadMap } from "..";
+
 import LastestCourses from "../lastest-courses/LastestCourses";
 
 
@@ -21,7 +21,7 @@ const Hero = () => {
    
       <LastestCourses />
       <RoadMap />
-      <CarouselComponent />
+      <CarouselContainer />
     </div>
   );
 };

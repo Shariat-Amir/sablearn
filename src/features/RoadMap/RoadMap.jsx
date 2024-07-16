@@ -5,10 +5,10 @@ const RoadMap = () => {
     <div >
         <div className="px-20 pt-10 dark:text-white">
         <h2 className='text-3xl dark:text-white flex gap-5'>
-        <div className='w-6 h-6 bg-red-500'></div>
+        <span className='w-6 h-6 bg-red-500'></span>
             نقشه راه
         </h2>
-        <p className="text-xl pt-5">نقشه راه برای شروع اصولی یادگیری</p>
+        <p className="text-xl text-slate-400  pt-5">نقشه راه برای شروع اصولی یادگیری</p>
 
         </div>
         <div className="flex justify-between p-20">

@@ -8,7 +8,7 @@ const LastestCourses = () => {
         <div className='flex justify-between px-20'>
             
         <p className='text-3xl dark:text-white flex gap-5'>
-        <div className='w-6 h-6 bg-yellow-500'></div>
+        <span className='w-6 h-6 bg-yellow-500'></span>
             آخرین دوره های سبزلرن
             </p>
         <a className='text-xl text-white' href="">

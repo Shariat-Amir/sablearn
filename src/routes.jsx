@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, Notfound } from "./pages";
+import { Dashboard, Home, Notfound } from "./pages";
 import Layout from "./layout/Layout";
 
 
@@ -11,6 +11,10 @@ const router=createBrowserRouter([
                 path:"/",
                 element: <Home />
             },
+            {
+                path:"/dashboard",
+                element: <Dashboard />
+            }
             
            
         ],

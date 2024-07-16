@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router-dom"
 import router from "./routes"
 
 
+
 function App() {
   const{theme}=useContext(AppContext)
   useEffect(()=>{
@@ -15,6 +16,8 @@ function App() {
    }
   
   },[theme])
+
+
 
   return (
    <RouterProvider router={router} />

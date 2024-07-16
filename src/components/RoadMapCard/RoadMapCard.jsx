@@ -39,7 +39,7 @@ const RoadMapCard = ({icon, title , courses ,color}) => {
             <a  className='h-full w-full flex flex-col justify-center items-center gap-6' href="">
                 <span className='scale-[2] text-white'>{iconSelector()}</span>
                 <p className='text-white mt-5 text-2xl'>{title}</p>
-                <p className='text-white text-xl px-2 '>{`${courses} دوره`}</p>
+                <p className='text-white text-xl px-2 '>{courses ? courses +" "+"دوره" : ""}</p>
             </a>
 
     </div>

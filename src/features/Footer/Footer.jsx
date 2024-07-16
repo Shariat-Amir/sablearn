@@ -1,7 +1,7 @@
 import './Footer.css'
 const Footer = () => {
   return (
-    <div className="flex p-10 dark:bg-slate-700 dark:text-white ">
+    <div className="flex p-10 dark:bg-slate-700 dark:text-white border-t-2  dark:border-none">
       <div id="1" className="flex flex-col  justify-start items-start w-1/4">
         <p className='title'>درباره ی ما </p>
         <p>

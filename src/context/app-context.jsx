@@ -11,6 +11,8 @@ const initialState=()=>{
     }
 }
 
+
+
 const AppProvider=({children})=>{
 
     const [theme , setTheme]=useState(initialState)
@@ -24,8 +26,13 @@ const AppProvider=({children})=>{
      localStorage.setItem("theme", theme)
 
     },[theme])
+
+    // .............................
+
+    
+   
     return(
-        <AppContext.Provider value={{theme , changeTheme} }>
+        <AppContext.Provider value={{theme , changeTheme } }>
             {children}
         </AppContext.Provider>
     )

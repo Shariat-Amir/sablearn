@@ -1,0 +1,10 @@
+@keyframes upDown {
+    from {top:-100px}
+    to{top: 180px;}
+}
+
+.dropdown{
+    
+animation-name: upDown;
+animation-duration: 2s;
+}

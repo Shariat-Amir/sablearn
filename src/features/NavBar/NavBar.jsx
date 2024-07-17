@@ -1,11 +1,13 @@
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import MenuIcon from '@mui/icons-material/Menu';
 import './NavBar.css';
 import { ChangeTheme } from '../../components'; // assuming ChangeTheme is another component in the components folder
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { AppContext } from '../../context/app-context';
 
 function NavBar() {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -34,6 +36,40 @@ function NavBar() {
         };
     }, [showLogin]);
 
+    useEffect(()=>{
+   
+    },[])
+// ...................................
+const [windowWidth, setWindowWidth]=useState(window.innerWidth)
+
+useEffect(()=>{
+
+    const changeWindowWidth=()=>{
+        setWindowWidth(window.innerWidth)
+        console.log(windowWidth);
+    }
+    window.addEventListener('resize',changeWindowWidth)
+    return ()=>{window.removeEventListener('resize', changeWindowWidth)}
+
+},[windowWidth])
+// ...........................
+const {showSidebar , setShowSideBar}=useContext(AppContext)
+const sidebarHandler=()=>{
+    setShowSideBar((prevShowSideBar)=>!prevShowSideBar)
+}
+const ref2=useRef()
+useEffect(()=>{
+const sideBarCheckOutsideClick=()=>{
+    if(showSidebar && ref2.current && !ref2.current.contains(event.target)){
+        setShowSideBar(false)
+    }}
+
+    document.addEventListener('mousedown',sideBarCheckOutsideClick)
+    return ()=>{document.removeEventListener('mousedown',sideBarCheckOutsideClick)}
+})
+
+// ............................
+if(windowWidth >1024){
     return (
         <div className='flex shadow-lg pt-4 pb-5 dark:bg-slate-700 dark:text-white'>
             <div className='right flex w-1/2 justify-center gap-32 items-center'>
@@ -166,6 +202,49 @@ function NavBar() {
             </div>
         </div>
     );
+}
+else{
+    return(
+        <div className=' w-full h-20 shadow-lg dark:bg-slate-600 flex justify-center items-center'>
+            <div className='w-1/3 flex items-center justify-center' onClick={sidebarHandler}><MenuIcon /></div>
+            <div className=' w-1/3 flex items-center justify-center'><a href=""><img src="../../../public/images/main/logo.webp" className='w-16 scale-75' alt="" /></a></div>
+            <div className=' w-1/3 flex items-center justify-center '>
+                <ChangeTheme className="scale-75" />
+                <button className='bg-slate-100 h-[50px] w-[50px] rounded-full scale-75' onClick={showLoginHandler}>
+                        <PersonOutlineOutlinedIcon className='scale-110 text-gray-400' />
+                    </button>
+{showLogin && (
+                    <>
+                        <div ref={ref} className="w-[80%] h-60 dark:bg-slate-600 absolute left-5  bg-white top-28 transition-all shadow-xl duration-200 rounded-lg z-10">
+                            <form className="h-full flex flex-col items-center justify-center gap-2" onSubmit={handleSubmit(onSubmit)}>
+                                <p>شماره موبایل</p>
+                                <input {...register("username", { required: true, minLength: 10, maxLength: 11 })} type="text" placeholder="لطفا نام کاربری را وارد نمایید" className={`w-[80%] rounded-lg shadow-lg text-center text-black ${errors.username && 'border border-red-500'}`} />
+                                {errors.username && <p className="text-red-500">شماره موبایل وارد شده باید 10 رقم باشد</p>}
+                                <p>رمزعبور</p>
+                                <input {...register("password", { required: true, minLength: 8, maxLength: 20 })} type="password" placeholder="لطفا رمز عبور را وارد نمایید" className={`w-[80%] rounded-lg shadow-lg text-center text-black ${errors.password && 'border border-red-500'}`} />
+                                {errors.password && <p className="text-red-500">کلمه عبور وارد شده باید حداقل 8 و حداکثر 20 رقم باشد</p>}
+                                <button className="" type="submit">ورود</button>
+                            </form>
+                        </div>
+                        <div className="dark:bg-slate-600 bg-white w-14 h-14 rotate-45 absolute left-10 top-24 z-0"></div>
+                    </>
+                )}
+                </div>
+                {
+                    showSidebar && (
+                        <div ref={ref2} className='bg-white z-10  cursor-pointer w-44 h-64 shadow-lg dark:bg-slate-600 dark:text-white rounded-lg absolute right-0 top-20 sidebarAnimation flex flex-col items-center justify-center gap-5  '>
+                            <a className='hover:text-green-500' href="#">فرانت اند</a>
+                            <a className='hover:text-green-500' href="#">امنیت</a>
+                            <a className='hover:text-green-500' href="#">پایتون</a>
+                            <a className='hover:text-green-500' href="#">مهارت های نرم</a>
+                            <a className='hover:text-green-500' href="#">مقالات</a>
+                        </div>
+                    )
+                }
+        </div>
+    )
+}
+   
 }
 
 export default NavBar;

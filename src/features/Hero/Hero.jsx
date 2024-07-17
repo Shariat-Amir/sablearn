@@ -1,11 +1,14 @@
+import { useContext } from "react";
 import { CarouselContainer, RoadMap } from "..";
+import { AppContext } from "../../context/app-context";
 
 import LastestCourses from "../lastest-courses/LastestCourses";
 
 
 const Hero = () => {
+  const {showSidebar }=useContext(AppContext)
   return (
-    <div className="flex flex-col dark:bg-gradient-to-l from-slate-800 to-slate-700 py-52 ">
+    <div className={`flex flex-col dark:bg-gradient-to-l from-slate-800 to-slate-700 py-52 ${showSidebar && "blur-sm transition-all duration-200"}`}>
         <div className="flex">
         <div id="right" className="w-1/2 mt-4 p-40 bg-gradient-to-l   dark:from-blue-300 bg-clip-text">
         <h1 className="text-5xl dark:text-transparent  dark:bg-clip-text">آکادمی آموزش برنامه نویسی سبزلرن</h1>

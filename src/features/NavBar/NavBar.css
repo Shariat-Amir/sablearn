@@ -8,3 +8,14 @@
 .dropdown-container li:hover{
     @apply text-green-400
 }
+
+@keyframes sidebar {
+   from{right:-200px}
+   to{right:0px}
+}
+.sidebarAnimation{
+    animation-name: sidebar;
+    animation-duration: 0.75s;
+    
+
+}

@@ -29,10 +29,12 @@ const AppProvider=({children})=>{
 
     // .............................
 
-    
+    const [showSidebar , setShowSideBar]=useState(false)
+
+
    
     return(
-        <AppContext.Provider value={{theme , changeTheme } }>
+        <AppContext.Provider value={{theme , changeTheme,showSidebar , setShowSideBar } }>
             {children}
         </AppContext.Provider>
     )

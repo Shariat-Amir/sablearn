@@ -2,5 +2,5 @@ a{
     @apply hover:text-green-500
 }
 .title{
-    @apply text-xl
+    @apply desktop:text-xl text-lg
 }

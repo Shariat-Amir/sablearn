@@ -30,11 +30,23 @@ const AppProvider=({children})=>{
     // .............................
 
     const [showSidebar , setShowSideBar]=useState(false)
+    // .............................
+    const [windowWidth, setWindowWidth]=useState(window.innerWidth)
 
+    useEffect(()=>{
+    
+        const changeWindowWidth=()=>{
+            setWindowWidth(window.innerWidth)
+            console.log(windowWidth);
+        }
+        window.addEventListener('resize',changeWindowWidth)
+        return ()=>{window.removeEventListener('resize', changeWindowWidth)}
+    
+    },[windowWidth])
 
    
     return(
-        <AppContext.Provider value={{theme , changeTheme,showSidebar , setShowSideBar } }>
+        <AppContext.Provider value={{theme , changeTheme,showSidebar , setShowSideBar , windowWidth } }>
             {children}
         </AppContext.Provider>
     )

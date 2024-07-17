@@ -3,7 +3,7 @@ import { RoadMapCard } from "../../components"
 const RoadMap = () => {
   return (
     <div >
-        <div className="px-20 pt-10 dark:text-white">
+        <div className="px-20 pt-10 dark:text-white ">
         <h2 className='text-3xl dark:text-white flex gap-5'>
         <span className='w-6 h-6 bg-red-500'></span>
             نقشه راه
@@ -11,7 +11,7 @@ const RoadMap = () => {
         <p className="text-xl text-slate-400  pt-5">نقشه راه برای شروع اصولی یادگیری</p>
 
         </div>
-        <div className="flex justify-between p-20">
+        <div className="flex desktop:justify-between p-20  desktop:flex-row flex-col justify-center items-center gap-5">
         <RoadMapCard icon='frontend' title='فرانت اند' courses='28' color='orange'/>
         <RoadMapCard icon='security' title='امنیت' courses='9' color='green'/>
         <RoadMapCard icon='python' title='پایتون' courses='6' color='purple'/>

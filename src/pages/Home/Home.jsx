@@ -25,7 +25,7 @@ function Notification() {
       <>
       <Hero />
        {showDiv && (
-            <div ref={ref} className="dark:bg-slate-600 dropdown w-[700px] h-[200px] gap-5 px-5 rounded-lg shadow-lg flex flex-col justify-center items-center text-center z-10 absolute top-40 left-[30%] ">
+            <div ref={ref} className="bg-white dark:bg-slate-600 mobile:w-[80%] mobile:p-4 moblie: dropdown w-[700px] h-[200px] gap-5 px-5 rounded-lg shadow-lg flex flex-col justify-center items-center text-center z-10 absolute top-40 left-[10%] ">
               <span className='absolute top-2 right-2 cursor-pointer hover:text-slate-400 ' onClick={()=>{setShowDiv(false)}}><CloseOutlinedIcon /></span>
                 <p className="text-3xl text-red-400">توجه ... !</p>
                 <p className="dark:text-white">این وب سایت یک وبسایت تمرینی و الگو گرفته از سایت سبزلرن می باشد و به همین دلیل تمامی لینک های مربوط به کلاس ها و دوره ها در آن غیر فعال می باشد</p>

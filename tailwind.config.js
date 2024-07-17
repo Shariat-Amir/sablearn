@@ -9,6 +9,10 @@ export default {
       fontFamily:{
         'lalezar':"lalezar"
       },
+      screens:{
+        'mobile':'375px',
+        'desktop':'1240px',
+      }
     },
   },
   plugins: [],

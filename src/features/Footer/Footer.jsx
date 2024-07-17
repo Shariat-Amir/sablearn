@@ -22,13 +22,13 @@ const Footer = () => {
         <a href="">آموزش HTML</a>
         <a href="">آموزش CSS</a>
       </div>
-      <div id="4" className="flex flex-col w-1/4 justify-start items-center">
+      <div id="4" className="flex flex-col w-1/4  text-nowrap justify-start items-center">
         <p className='title'>شبکه های اجتماعی</p>
         <a href="" className="flex items-center ">
             <img src="../../../images/main/instagram-logo.png" alt="instagram" className="w-10" />
             <span>@sabzlearn_</span>
         </a>
-        <a href="" className="flex items-center">
+        <a href="" className="flex items-center ">
             <img src="../../../images/main/telegram-logo.png" alt="telegram" className="w-10" />
             <span>@sabzlearn</span>
         </a>

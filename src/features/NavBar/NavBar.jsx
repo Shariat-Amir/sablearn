@@ -40,18 +40,8 @@ function NavBar() {
    
     },[])
 // ...................................
-const [windowWidth, setWindowWidth]=useState(window.innerWidth)
+const {windowWidth}=useContext(AppContext)
 
-useEffect(()=>{
-
-    const changeWindowWidth=()=>{
-        setWindowWidth(window.innerWidth)
-        console.log(windowWidth);
-    }
-    window.addEventListener('resize',changeWindowWidth)
-    return ()=>{window.removeEventListener('resize', changeWindowWidth)}
-
-},[windowWidth])
 // ...........................
 const {showSidebar , setShowSideBar}=useContext(AppContext)
 const sidebarHandler=()=>{
@@ -71,11 +61,11 @@ const sideBarCheckOutsideClick=()=>{
 // ............................
 if(windowWidth >1024){
     return (
-        <div className='flex shadow-lg pt-4 pb-5 dark:bg-slate-700 dark:text-white'>
-            <div className='right flex w-1/2 justify-center gap-32 items-center'>
-                <a href=""><img src="../../../public/images/main/logo.webp" alt="logo" className='w-20' /></a>
+        <div className='flex desktop: shadow-lg pt-4 pb-5 dark:bg-slate-700 dark:text-white  '>
+            <div className='right flex w-1/2 justify-center  items-center text-md'>
+                <a href=""><img src="../../../public/images/main/logo.webp" alt="logo" className='w-20 ml-4' /></a>
                 <ul className='flex gap-10'>
-                    <li className='dropdown-link py-4'>
+                    <li className='dropdown-link  py-4'>
                         فرانت اند 
                         <KeyboardArrowDownOutlinedIcon />
                         <div className='absolute dropdown-container'>
@@ -172,7 +162,7 @@ if(windowWidth >1024){
                     </li>
                 </ul>
             </div>
-            <div className='left w-1/2 flex flex-row-reverse justify-between items-center px-44 pt-2'>
+            <div className='left w-1/2 flex flex-row-reverse justify-start pe-10 items-center gap-5 px-44 pt-2 '>
                 <div className='flex gap-10'>
                     <ChangeTheme />
                     <button className='bg-slate-100 h-[50px] w-[50px] rounded-full' onClick={showLoginHandler}>
@@ -196,7 +186,7 @@ if(windowWidth >1024){
                     </>
                 )}
                 <div className='bg-gray-100 flex justify-between gap-5 h-[80%] rounded-3xl px-4'>
-                    <input type="text" placeholder="چیو میخوایی یاد بگیری" className='bg-transparent border-none outline-none' />
+                    <input type="text" placeholder="چیو میخوایی یاد بگیری" className='bg-transparent border-none outline-none ' />
                     <button><SearchOutlinedIcon className='text-gray-400' /></button>
                 </div>
             </div>
